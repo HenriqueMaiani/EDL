@@ -11,60 +11,113 @@ C# é uma linguagem totalmente Orientada a Objetos (OO) e de tipos protegidos;
 Suporta métodos de tipos genéricos, como uma linguagem OO o C# suporta conceitos de encapsulamento, herança e polimorfismo. Além dos princípios básicos OO o C# facilita o desenvolvimento de componentes de software por meio de vários constructos (Assinaturas de métodos encapsulados, Propriedades, Atributos, Comentários XML, LINQ, ...), o C# suporta ponteiros.
 
 **Exemplos de códigos:**
-Hello Word:
 
-using System;  
-public class ClasseExemplo {  
-public static void Main() {  
-Console.WriteLine("Hello Word!");  
-}  
-}  
-}  
+**Hello Word:C#**
 
-**Vetores:**  
-public static void Main(string[] args) {  
-int[] primos = {2,3,5,7,11,13,17,29,23,29,31};  
-int[] somas = new int[11];  
-for(int i = 0; i < 11; i++) {  
-somas[i] = 0;  
-for(int j = 0; j <= i; j++) {  
-somas[i] += primos[j];  
-}  
-}  
-Console.Write("somas: ", somas);  
-for(int i = 0; i < 11; i++) {  
-Console.Write(" {0}", somas[i]);  
-}  
-Console.WriteLine();  
-}  
+     using System;  
+     namespace Hello
+     {
+        public class ClasseExemplo 
+        {
+            public static void Main() 
+            {  
+                Console.WriteLine("Hello Word!");  
+            }  
+        }
+    }
 
-**Herança:**   
-using System;  
+**Hello Word:C**
 
-public class Animal{
-private string raca;
+    #include <stdio .h> 
+    int main ()
+    {
+        printf ("Hello World\n");
+    }
+    
+**Vetores:C#**  
 
-public Animal(string raca) {
-Raca = raca;  
-}  
-public string Raca {  
-get { return raca; }  
-set { raca = value; }  
-}  
-public void Respirar() {  
-// …  
-}  
-}  
-public class Cachorro : Animal {  
-public Cachorro(string raca) : base(raca) {}  
-}  
-namespace Hello{  
-public class Application {  
-static void Main() {  
-Cachorro cachorro = new Cachorro("beagle");  
-cachorro.Respirar();  
-}  
-}  
+    using System;
+    public static void Main(string[] args)
+    {  
+        int[] primos = {2,3,5,7,11,13,17,29,23,29,31};  
+        int[] somas = new int[11];  
+        for(int i = 0; i < 11; i++)
+        {  
+            somas[i] = 0;  
+            for(int j = 0; j <= i; j++) 
+            {  
+                somas[i] += primos[j];  
+            }  
+        }  
+        Console.Write("somas: ", somas);  
+        for(int i = 0; i < 11; i++) 
+        {  
+            Console.Write(" {0}", somas[i]);  
+        }  
+        Console.WriteLine();  
+    }  
+**Vetores:C**
+
+     #include <stdio.h>
+     int main()
+     {
+        int vetor[5];
+        int x, i;
+        
+        printf ("digite 5 numeros\n");
+     
+        for (i = 0; i < 5; i++)
+        {
+           scanf("%d", &vetor[i]);
+        }
+        i = 1;
+        x = vetor[0];
+     
+        while (i < 5)
+        {
+            if (vetor[i] > x)
+            {
+               x = vetor[i];
+            }
+            i++;
+        }
+     
+        printf("\n O maior numero que voce digitou foi %d .\n",x);
+     getch ();
+        return 0;
+     }
+**Herança:C#**
+
+    using System;  
+    public class Animal
+    {
+        private string raca;
+        public Animal(string raca) 
+        {
+            Raca = raca;  
+        }  
+        public string Raca
+        {  
+            get { return raca; }  
+            set { raca = value; }  
+        }  
+        public void Respirar()
+        {  
+            // …  
+        }  
+    }  
+    public class Cachorro : Animal 
+    {  
+        public Cachorro(string raca) : base(raca) {}  
+    }  
+    public class Application 
+    {  
+        static void Main() 
+        {  
+            Cachorro cachorro = new Cachorro("beagle");  
+            cachorro.Respirar();  
+        }  
+    }  
 
 **Conversão de tipo:**  
 // converte uma string para um byte  
@@ -99,3 +152,4 @@ Um dos principais editores do Java é o Eclipse, o do C# é o Visual Studio. Mas
 **Fontes:**
 PORTAL EDUCAÇÃO - Cursos Online; [Wikipédia]    (https://pt.wikipedia.org/wiki/C_Sharp#Etimologia)  
 Use a cabeça C# (Andrew Stellman and Jennifer Greene).
+
